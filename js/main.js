@@ -103,11 +103,11 @@
         arrows: false,
         pagination: false,
         gap: '1rem',
-        perView: 6,
+        perPage: 6,
         breakpoints: {
-          1280: { perView: 5 },
-          1024: { perView: 3 },
-          640: { perView: 2 }
+          1280: { perPage: 5 },
+          1024: { perPage: 3 },
+          640: { perPage: 2 }
         }
       }).mount();
     }
