@@ -90,6 +90,29 @@
     revealEls.forEach((el) => el.classList.add('is-visible'));
   }
 
+  /* ---------- Trusted By Clients Carousel (Splide) ---------- */
+  if (window.Splide) {
+    const clientsEl = doc.querySelector('.clients-splide');
+    if (clientsEl) {
+      new window.Splide(clientsEl, {
+        type: 'loop',
+        autoplay: true,
+        interval: 3000,
+        pauseOnHover: true,
+        speed: 800,
+        arrows: false,
+        pagination: false,
+        gap: '1rem',
+        perView: 6,
+        breakpoints: {
+          1280: { perView: 5 },
+          1024: { perView: 3 },
+          640: { perView: 2 }
+        }
+      }).mount();
+    }
+  }
+
   // ============================================================
   // Contact Form — validation + Netlify submit
   // ============================================================

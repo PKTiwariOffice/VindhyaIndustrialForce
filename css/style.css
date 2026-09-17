@@ -268,6 +268,83 @@ body {
   gap: 0.6rem;
 }
 
+/* ============================================================
+   Trusted By Clients — Splide carousel
+   ============================================================ */
+.clients-splide {
+  --splide-pagination-top: auto;
+  padding: 0.25rem;
+}
+.clients-splide .splide__slide {
+  height: auto;
+  align-items: stretch;
+  display: flex;
+}
+.splide__slide .client-card,
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: 100%;
+  min-height: 6.5rem;
+  background-color: var(--color-slate-50);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 0.9rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
+}
+.splide__slide .client-card:hover,
+.client-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-secondary);
+  background-color: #fff;
+}
+.splide__slide .client-card figcaption,
+.client-card figcaption {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-slate-400);
+  transition: color var(--transition-base);
+}
+.splide__slide .client-card:hover figcaption,
+.client-card:hover figcaption {
+  color: var(--color-secondary);
+}
+.splide__slide .client-logo,
+.client-logo {
+  width: 100%;
+  max-width: 7.5rem;
+  height: auto;
+  filter: grayscale(1);
+  opacity: 0.72;
+  transition: filter var(--transition-slow), opacity var(--transition-slow), transform var(--transition-base);
+}
+.splide__slide .client-card:hover .client-logo,
+.client-card:hover .client-logo {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.06);
+}
+.client-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color var(--transition-base), transform var(--transition-base);
+}
+.client-more-link:hover {
+  color: var(--color-secondary);
+  transform: translateX(3px);
+}
+
 /* Hero grid pattern overlay */
 .hero-pattern {
   background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);

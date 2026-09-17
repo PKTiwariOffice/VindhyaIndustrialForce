@@ -31,6 +31,9 @@
 
     <!-- Custom styles: brand tokens, keyframes, layouts -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Splide.js carousel styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
@@ -179,14 +182,95 @@
             </div>
         </section>
 
-        <!-- ======= Client / Trust Strip ======= -->
-        <section class="bg-white border-b border-slate-100 py-8" aria-label="Trusted across Bhopal &amp; Madhya Pradesh">
+        <!-- ======= Trusted By Clients ======= -->
+        <section id="clients" class="py-20 bg-white scroll-mt-24" aria-label="Trusted by clients">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
-                    Trusted by industrial units, factories &amp; corporate offices across Bhopal &amp; M.P.
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div class="section-eyebrow justify-center">Our Clientele</div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 leading-tight">
+                        Trusted By Industrial Units, Factories &amp; Corporate Offices
+                        <span class="text-amber-600">Across Bhopal &amp; M.P.</span>
+                    </h2>
+                </div>
+
+                <div class="clients-splide splide">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <!-- Healthcare -->
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/bhopal-fracture-hospital.svg" alt="Bhopal Fracture Hospital logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Healthcare</figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/globus-hospital.svg" alt="Globus Hospital logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Healthcare</figcaption>
+                                </figure>
+                            </li>
+
+                            <!-- Industrial / Corporate -->
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/camp-mandideep.svg" alt="CAMP Mandideep logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Industrial</figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/surevin-bpo.svg" alt="Surevin BPO logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Corporate</figcaption>
+                                </figure>
+                            </li>
+
+                            <!-- Hospitality -->
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/ranjits-golden-oak.svg" alt="Ranjit's Golden Oak Resort logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Hospitality</figcaption>
+                                </figure>
+                            </li>
+
+                            <!-- Educational -->
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/ankur-school.svg" alt="Ankur School logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Education</figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/govt-benazeer-college.svg" alt="Govt. Benazeer College logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Education</figcaption>
+                                </figure>
+                            </li>
+
+                            <!-- Township -->
+                            <li class="splide__slide">
+                                <figure class="client-card">
+                                    <img src="/assets/images/clients/landmark-city.svg" alt="Landmark City logo"
+                                         class="client-logo" loading="lazy">
+                                    <figcaption>Township</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="text-center mt-10">
+                    <a href="#contact" class="client-more-link">
+                        + Many more across Bhopal &amp; M.P.
+                        <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
                 </p>
-                <img src="/assets/images/client-logos.svg" alt="Client logos placeholder"
-                     class="mx-auto h-10 opacity-60">
             </div>
         </section>
 
@@ -542,5 +626,8 @@
 
     <!-- Modular JavaScript -->
     <script src="/js/main.js" defer></script>
+
+    <!-- Splide.js carousel library -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </body>
 </html>
