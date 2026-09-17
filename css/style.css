@@ -49,7 +49,10 @@ html {
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--color-slate-50);
-  color: var(--color-slate-800);
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -70,6 +73,48 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-slate-500);
+}
+
+/* ============================================================
+   Global Layout & Containers
+   ============================================================ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem; /* 20px side margins */
+}
+section {
+  padding: 4rem 0; /* Consistent vertical rhythm */
+}
+
+/* ============================================================
+   Responsive Fluid Typography
+   ============================================================ */
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.4rem); }
+h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
+p  { font-size: clamp(0.95rem, 2vw, 1.1rem); }
+
+/* ============================================================
+   Touch Optimisation — comfortable 44px tap targets
+   ============================================================ */
+button,
+.nav-link,
+.drawer-link,
+.drawer-call,
+.drawer-wa,
+a.btn-primary,
+a.btn-secondary,
+a.btn-whatsapp,
+a.card-link,
+a.client-more-link {
+  min-height: 44px;
+}
+button {
+  min-width: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ============================================================
@@ -268,12 +313,35 @@ body {
   gap: 0.6rem;
 }
 
+/* Services responsive grid + cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.service-card {
+  background: #ffffff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
 /* ============================================================
    Trusted By Clients — Splide carousel
    ============================================================ */
 .clients-splide {
   --splide-pagination-top: auto;
-  padding: 0.25rem;
+  padding: 0.5rem;
+}
+.clients-splide .splide__track {
+  padding: 0.5rem 0;
 }
 .clients-splide .splide__slide {
   height: auto;
@@ -289,7 +357,7 @@ body {
   gap: 0.6rem;
   width: 100%;
   height: 100%;
-  min-height: 6.5rem;
+  min-height: 7rem;
   background-color: var(--color-slate-50);
   border: 1px solid var(--color-slate-200);
   border-radius: var(--radius-lg);
@@ -320,7 +388,9 @@ body {
 .client-logo {
   width: 100%;
   max-width: 7.5rem;
+  max-height: 3.75rem;
   height: auto;
+  object-fit: contain;
   filter: grayscale(1);
   opacity: 0.72;
   transition: filter var(--transition-slow), opacity var(--transition-slow), transform var(--transition-base);
@@ -357,11 +427,12 @@ body {
 .about-section {
   padding: 5rem 0;
   background-color: var(--color-white, #fff);
+  border-top: 1px solid var(--color-slate-200);
 }
 .about-container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
   text-align: center;
 }
 .about-header {
@@ -390,9 +461,9 @@ body {
   gap: 1.5rem;
 }
 .about-body p {
-  color: var(--color-slate-600);
+  color: var(--color-slate-700);
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   text-align: left;
 }
 .about-body strong {
@@ -404,12 +475,13 @@ body {
    ============================================================ */
 .why-us-section {
   padding: 5rem 0;
-  background-color: var(--color-slate-100);
+  background-color: #fff;
+  border-top: 1px solid var(--color-slate-200);
 }
 .why-us-container {
   max-width: 75rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 .why-us-header {
   max-width: 36rem;
@@ -422,26 +494,24 @@ body {
   margin-top: 0.75rem;
   line-height: 1.2;
 }
+.why-us-grid,
 .why-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
-}
-@media (min-width: 640px) {
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  margin-top: 2rem;
 }
 .why-card {
-  background: #fff;
-  border: 1px solid var(--color-slate-200);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color var(--transition-base);
 }
 .why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   border-color: var(--color-secondary);
 }
 .why-icon {
@@ -463,8 +533,8 @@ body {
   margin-bottom: 0.5rem;
 }
 .why-card-text {
-  color: var(--color-slate-500);
-  font-size: 0.9rem;
+  color: var(--color-slate-600);
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   line-height: 1.7;
 }
 
