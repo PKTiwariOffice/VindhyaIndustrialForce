@@ -352,6 +352,123 @@ body {
 }
 
 /* ============================================================
+   About Section
+   ============================================================ */
+.about-section {
+  padding: 5rem 0;
+  background-color: var(--color-white, #fff);
+}
+.about-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.about-header {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+}
+.about-heading {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-slate-900);
+  margin-top: 0.75rem;
+  line-height: 1.2;
+}
+.about-subheading {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+.about-body {
+  max-width: 52rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.about-body p {
+  color: var(--color-slate-600);
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: left;
+}
+.about-body strong {
+  color: var(--color-slate-900);
+}
+
+/* ============================================================
+   Why Choose Us Section
+   ============================================================ */
+.why-us-section {
+  padding: 5rem 0;
+  background-color: var(--color-slate-100);
+}
+.why-us-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.why-us-header {
+  max-width: 36rem;
+  margin: 0 auto 3rem;
+}
+.why-us-heading {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-slate-900);
+  margin-top: 0.75rem;
+  line-height: 1.2;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.why-card {
+  background: #fff;
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-secondary);
+}
+.why-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.why-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-slate-900);
+  margin-bottom: 0.5rem;
+}
+.why-card-text {
+  color: var(--color-slate-500);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ============================================================
    Scroll-reveal animations
    ============================================================ */
 .reveal {
