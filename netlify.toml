@@ -1,0 +1,57 @@
+# ============================================================
+# Vindhya Industrial Force — Netlify build & routing config
+# ============================================================
+
+[build]
+  # Static site — publish the repo root directly
+  publish = "."
+
+  # No framework build step is required (Tailwind is served via CDN).
+  command = "echo 'Static site - no build step required.'"
+
+[functions]
+  # Placeholder serverless handlers live here (optional — Netlify's
+  # built-in form handling is the primary submission path).
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# NOTE: The global SPA-style fallback lives in the root `_redirects`
+# file (`/*  /index.html  200`). Netlify merges both sources, with
+# redirects declared here taking precedence.
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+# Section aliases redirect to the matching anchor on the homepage.
+# (301 so browsers honour the URL fragment.)
+[[redirects]]
+  from = "/about"
+  to = "/#about"
+  status = 301
+
+[[redirects]]
+  from = "/services"
+  to = "/#services"
+  status = 301
+
+[[redirects]]
+  from = "/why-us"
+  to = "/#why-us"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/#contact"
+  status = 301

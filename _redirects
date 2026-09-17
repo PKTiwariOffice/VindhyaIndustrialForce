@@ -1,0 +1,19 @@
+# ============================================================
+# Vindhya Industrial Force — Redirect rules
+# More specific rules are evaluated before generic ones.
+# ============================================================
+
+# Canonicalize root page
+/index.html  /  301
+
+# Pretty route aliases -> homepage section anchors (301 keeps the hash)
+/about    /#about    301
+/services /#services 301
+/why-us   /#why-us   301
+/contact  /#contact  301
+
+# Netlify form confirmation route
+/thank-you  /thank-you.html  200
+
+# SPA-style fallback: every unmatched route serves the homepage
+/*  /index.html  200

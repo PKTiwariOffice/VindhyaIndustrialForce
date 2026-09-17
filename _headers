@@ -1,0 +1,29 @@
+# ============================================================
+# Vindhya Industrial Force — Security & caching headers
+# ============================================================
+
+# Default security headers for all responses
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-XSS-Protection: 1; mode=block
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Versioned static assets: cache aggressively
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+# CSS & JS: short-lived cache for html, long-lived for assets
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages: no-cache so deploys always serve fresh markup
+/index.html
+/thank-you.html
+  Cache-Control: public, max-age=0, must-revalidate

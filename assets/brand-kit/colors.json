@@ -1,0 +1,52 @@
+{
+  "brandName": "Vindhya Industrial Force",
+  "tagline": "Trusted Industrial Security & Manpower Outsourcing Partner",
+  "proprietor": "Mamta Mishra",
+  "primary": {
+    "name": "Brand Blue (Slate-900)",
+    "hex": "#0f172a",
+    "cssVar": "--color-primary",
+    "usage": "Primary backgrounds, headings, buttons, footer"
+  },
+  "primarySoft": {
+    "name": "Brand Blue Soft",
+    "hex": "#1e293b",
+    "cssVar": "--color-primary-soft",
+    "usage": "Card surfaces, secondary fills"
+  },
+  "primaryDeep": {
+    "name": "Brand Blue Deep",
+    "hex": "#020617",
+    "cssVar": "--color-primary-deep",
+    "usage": "Footer background, darkest accents"
+  },
+  "secondary": {
+    "name": "Brand Amber",
+    "hex": "#f59e0b",
+    "cssVar": "--color-secondary",
+    "usage": "CTAs, highlights, active states, icons"
+  },
+  "secondaryLight": {
+    "name": "Brand Amber Light",
+    "hex": "#fbbf24",
+    "cssVar": "--color-secondary-light",
+    "usage": "CTA hover states"
+  },
+  "neutralTones": {
+    "slate100": { "hex": "#f1f5f9", "usage": "Light section backgrounds" },
+    "slate200": { "hex": "#e2e8f0", "usage": "Borders" },
+    "slate400": { "hex": "#94a3b8", "usage": "Muted text / placeholders" },
+    "slate500": { "hex": "#64748b", "usage": "Body secondary text" },
+    "slate700": { "hex": "#334155", "usage": "Strong text" },
+    "slate900": { "hex": "#0f172a", "usage": "Primary text on light" }
+  },
+  "success": {
+    "name": "WhatsApp / Success Green",
+    "hex": "#059669",
+    "usage": "WhatsApp CTA, success states"
+  },
+  "typefaces": [
+    { "family": "Inter", "weights": [300, 400, 500, 600, 700, 800, 900], "usage": "UI + headings" }
+  ],
+  "note": "Replace placeholder SVG/PNG images under /assets/images with real photography before production launch."
+}

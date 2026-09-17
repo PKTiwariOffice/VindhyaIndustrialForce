@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" role="img" aria-label="Vindhya Industrial Force hero banner placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.12)"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="500" fill="url(#bg)"/>
+  <rect width="1600" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1600" height="6" fill="#f59e0b"/>
+  <text x="800" y="230" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="54" fill="#ffffff" letter-spacing="1">
+    HERO BANNER
+  </text>
+  <text x="800" y="295" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="26" fill="#f59e0b">
+    Replace with real hero photography
+  </text>
+  <text x="800" y="340" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.55)">
+    Recommended: 1600 x 500 px, security personnel on duty (web/OG image)
+  </text>
+</svg>

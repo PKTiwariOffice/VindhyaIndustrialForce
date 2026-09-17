@@ -1,0 +1,26 @@
+{
+  "name": "vindhya-industrial-force",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official website of Vindhya Industrial Force — industrial security, manpower outsourcing, housekeeping & facility management services in Bhopal, Madhya Pradesh.",
+  "keywords": [
+    "security services",
+    "manpower outsourcing",
+    "housekeeping",
+    "facility management",
+    "bhopal",
+    "madhya pradesh",
+    "netlify"
+  ],
+  "author": "Vindhya Industrial Force (Mamta Mishra)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "echo \"Static site — no build step required.\" && exit 0",
+    "dev": "npx --yes serve .",
+    "serve": "npx --yes serve .",
+    "preview": "npx --yes serve ."
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
