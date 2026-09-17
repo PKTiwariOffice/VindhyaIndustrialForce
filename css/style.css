@@ -85,7 +85,7 @@ body {
   padding: 0 1.25rem; /* 20px side margins */
 }
 section {
-  padding: 4rem 0; /* Consistent vertical rhythm */
+  padding: 4.5rem 0; /* Consistent vertical rhythm */
 }
 
 /* ============================================================
@@ -262,6 +262,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 .section-eyebrow::before {
   content: '';
@@ -269,6 +270,20 @@ button {
   height: 2px;
   background-color: var(--color-secondary);
   display: inline-block;
+}
+
+/* Section header alignment & hierarchy */
+.section-header {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+.section-header h2 {
+  margin-top: 0.5rem;
+  line-height: 1.25;
+}
+.section-header .section-eyebrow {
+  justify-content: center;
 }
 
 /* Feature tags in hero */
@@ -291,14 +306,6 @@ button {
 }
 
 /* Service cards */
-.card-service {
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-}
-.card-service:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-card-hover);
-  border-color: var(--color-secondary) !important;
-}
 .card-link {
   color: var(--color-primary);
   font-weight: 600;
@@ -317,20 +324,21 @@ button {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
 }
 .service-card {
   background: #ffffff;
-  border: 1px solid var(--color-slate-200);
-  border-radius: 12px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
+  border-color: var(--color-secondary);
 }
 
 /* ============================================================
@@ -386,10 +394,8 @@ button {
 }
 .splide__slide .client-logo,
 .client-logo {
-  width: 100%;
-  max-width: 7.5rem;
-  max-height: 3.75rem;
-  height: auto;
+  width: auto;
+  max-height: 48px;
   object-fit: contain;
   filter: grayscale(1);
   opacity: 0.72;
@@ -425,7 +431,7 @@ button {
    About Section
    ============================================================ */
 .about-section {
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   background-color: var(--color-white, #fff);
   border-top: 1px solid var(--color-slate-200);
 }
@@ -474,7 +480,7 @@ button {
    Why Choose Us Section
    ============================================================ */
 .why-us-section {
-  padding: 5rem 0;
+  padding: 4.5rem 0;
   background-color: #fff;
   border-top: 1px solid var(--color-slate-200);
 }
@@ -498,20 +504,20 @@ button {
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.75rem;
+  margin-top: 2.5rem;
 }
 .why-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color var(--transition-base);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 .why-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
   border-color: var(--color-secondary);
 }
 .why-icon {

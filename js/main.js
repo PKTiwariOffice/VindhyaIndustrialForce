@@ -102,7 +102,7 @@
         speed: 800,
         arrows: false,
         pagination: false,
-        gap: '1rem',
+        gap: '2.5rem',
         perPage: 6,
         breakpoints: {
           1280: { perPage: 5 },
