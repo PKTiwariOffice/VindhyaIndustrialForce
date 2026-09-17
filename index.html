@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vindhya Industrial Force | Industrial Security, Manpower &amp; Facility Services Bhopal MP</title>
-    <meta name="description" content="Vindhya Industrial Force — trusted industrial security, manpower outsourcing, housekeeping and corporate support staff across Bhopal &amp; Madhya Pradesh. Led by Proprietor Mamta Mishra. Call +91-9425655443.">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="Vindhya Industrial Force — trusted industrial security, manpower outsourcing, housekeeping and corporate support staff across Bhopal &amp; Madhya Pradesh. 100% verified staff, 24/7 operations, PF/ESIC compliant. Led by Proprietor Mamta Mishra. Call +91-9425655443.">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A192F">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -18,9 +18,6 @@
     <!-- Favicon (brand kit SVG badge) -->
     <link rel="icon" type="image/svg+xml" href="/assets/brand-kit/logo.svg">
 
-    <!-- Tailwind CSS Play CDN (build-time upgrade: see css/style.css) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -29,595 +26,417 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Custom styles: brand tokens, keyframes, layouts -->
+    <!-- Enterprise stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Splide.js carousel styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-
-    <!-- Swiper.js carousel styles (Hero/Services image slider) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
-<body class="bg-slate-50 antialiased">
+<body>
 
-    <!-- ======= Top Info Bar ======= -->
-    <div class="topbar bg-slate-900 text-slate-300 text-sm py-2 px-4 border-b border-slate-800">
-        <div class="container flex flex-col md:flex-row justify-between items-center gap-2">
-            <div class="flex items-center space-x-6">
-                <a href="tel:+919425655443" class="hover:text-amber-400 transition-colors flex items-center gap-2">
-                    <i class="fa-solid fa-phone text-amber-500"></i> +91-9425655443
-                </a>
-                <a href="mailto:vif.bhopal@gmail.com" class="hover:text-amber-400 transition-colors flex items-center gap-2">
-                    <i class="fa-solid fa-envelope text-amber-500"></i> vif.bhopal@gmail.com
-                </a>
-            </div>
-            <div class="text-xs text-slate-400 flex items-center gap-2">
-                <i class="fa-solid fa-user-check text-amber-500"></i>
-                Proprietor: <span class="text-slate-200 font-medium">Mamta Mishra</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ======= Sticky Header / Navigation ======= -->
-    <header class="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50">
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="flex justify-between items-center h-20">
-                <!-- Brand -->
-                <a href="#home" class="flex items-center space-x-3" aria-label="Vindhya Industrial Force — Home">
-                    <img src="/assets/images/logo.png" alt="Vindhya Industrial Force logo"
-                         class="h-12 w-12 drop-shadow-sm" loading="eager">
-                    <div class="leading-tight">
-                        <span class="text-lg md:text-xl font-extrabold text-slate-900 block tracking-tight">VINDHYA</span>
-                        <span class="text-[10px] md:text-xs tracking-widest font-semibold text-amber-600 block uppercase">Industrial Force</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Nav (active link highlighted on scroll via JS) -->
-                <nav class="hidden lg:flex space-x-7 font-medium text-slate-700" aria-label="Primary">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About Us</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#why-us" class="nav-link">Why Choose Us</a>
-                    <a href="#contact" class="nav-link">Contact Us</a>
-                </nav>
-
-                <!-- Desktop WhatsApp CTA -->
-                <div class="hidden lg:block">
-                    <a href="https://wa.me/919425655443?text=Hello%20Vindhya%20Industrial%20Force,%20I%20want%20to%20inquire%20about%20your%20services."
-                       target="_blank" rel="noopener"
-                       class="btn-whatsapp inline-flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Toggle -->
-                <div class="lg:hidden flex items-center">
-                    <button id="menu-btn" class="text-slate-700 hover:text-brand-amber p-2 focus:outline-none"
-                            aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
+            <a href="#home" class="nav-brand">
+                <img src="/assets/brand-data/logos/VIF_logo.png" alt="Vindhya Industrial Force Logo">
+                <div class="brand-text">VINDHYA INDUSTRIAL FORCE<span>Security &amp; Manpower</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#clients">Industries</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">Get Free Quote</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
 
-        <!-- Mobile Drawer -->
-        <div id="mobile-menu" class="drawer lg:hidden bg-slate-900 text-white px-4 pt-2 pb-6 shadow-xl">
-            <a href="#home" class="drawer-link font-medium text-amber-400">Home</a>
-            <a href="#about" class="drawer-link">About Us</a>
-            <a href="#services" class="drawer-link">Services</a>
-            <a href="#why-us" class="drawer-link">Why Choose Us</a>
-            <a href="#contact" class="drawer-link">Contact Us</a>
-            <div class="drawer-cta">
-                <a href="tel:+919425655443" class="drawer-call"><i class="fa-solid fa-phone"></i> Call Now</a>
-                <a href="https://wa.me/919425655443" target="_blank" rel="noopener" class="drawer-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <!-- ======= Hero Section ======= -->
-        <section id="home" class="relative bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 text-white overflow-hidden" style="padding: 5rem 0">
-            <div class="hero-pattern absolute inset-0 opacity-10"></div>
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
-
-            <div class="container relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-7 space-y-7">
-                        <div class="animate-fade-in-up delay-1">
-                            <span class="inline-flex items-center gap-2 bg-amber-500/15 text-amber-400 border border-amber-500/30 px-3.5 py-1.5 rounded-full text-sm font-semibold">
-                                <i class="fa-solid fa-shield-halved"></i> Trusted Industrial Security &amp; Manpower Outsourcing Partner
-                            </span>
-                        </div>
-
-                        <h1 class="animate-fade-in-up delay-2 font-black leading-tight tracking-tight">
-                            Complete Manpower &amp; Security Solutions for Your Business
-                        </h1>
-
-                        <p class="animate-fade-in-up delay-3 text-slate-300 text-lg leading-relaxed max-w-2xl">
-                            Vindhya Industrial Force provides highly trained security staff, skilled &amp; unskilled
-                            manpower, and comprehensive facility management services across Bhopal and Madhya Pradesh.
-                        </p>
-
-                        <!-- Key feature tags -->
-                        <ul class="animate-fade-in-up delay-4 flex flex-wrap gap-2.5">
-                            <li class="feature-tag"><i class="fa-solid fa-check text-amber-400"></i> 100% Verified Staff</li>
-                            <li class="feature-tag"><i class="fa-solid fa-check text-amber-400"></i> 24/7 Supervision &amp; Support</li>
-                            <li class="feature-tag"><i class="fa-solid fa-check text-amber-400"></i> Custom Contracts</li>
-                        </ul>
-
-                        <div class="animate-fade-in-up delay-5 flex flex-col sm:flex-row gap-4 pt-1">
-                            <a href="#contact" class="btn-primary text-center">Get A Free Quote <i class="fa-solid fa-arrow-right ml-2"></i></a>
-                            <a href="tel:+919425655443" class="btn-secondary text-center">
-                                <i class="fa-solid fa-phone text-amber-400"></i> Call +91-9425655443
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Hero Image Carousel + Core Expertise Card -->
-                    <div class="lg:col-span-5 space-y-8 animate-fade-in-up delay-3">
-                        <!-- Swiper: responsive hero/services image carousel -->
-                        <div class="hero-swiper swiper" role="region" aria-label="Vindhya Industrial Force services image carousel">
-                            <div class="swiper-wrapper">
-                                <!-- Slide 1: Manpower & Security banner -->
-                                <div class="swiper-slide">
-                                    <figure class="hero-slide">
-                                        <img src="/assets/images/hero-banner.svg"
-                                             alt="Complete manpower and security solutions for your business"
-                                             class="hero-slide-img" loading="lazy">
-                                        <figcaption class="hero-slide-caption">
-                                            <span>Complete Manpower &amp; Security Solutions</span>
-                                            <span>Verified staff for factories, offices &amp; hospitals</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- Slide 2: Security guard banner -->
-                                <div class="swiper-slide">
-                                    <figure class="hero-slide">
-                                        <img src="/assets/images/security-guard.svg"
-                                             alt="Trained 24/7 security personnel on duty"
-                                             class="hero-slide-img" loading="lazy">
-                                        <figcaption class="hero-slide-caption">
-                                            <span>24/7 Trained Security Personnel</span>
-                                            <span>Supervision &amp; rapid replacement round the clock</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <!-- Slide 3: Client trust banner -->
-                                <div class="swiper-slide">
-                                    <figure class="hero-slide">
-                                        <img src="/assets/images/client-logos.svg"
-                                             alt="Trusted by leading businesses across Bhopal and M.P."
-                                             class="hero-slide-img" loading="lazy">
-                                        <figcaption class="hero-slide-caption">
-                                            <span>Trusted By Leading Businesses</span>
-                                            <span>Healthcare, industrial, corporate &amp; education</span>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <!-- Carousel controls -->
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-prev" aria-label="Previous slide"></div>
-                            <div class="swiper-button-next" aria-label="Next slide"></div>
-                        </div>
-
-                        <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-100">
-                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Our Core Expertise</h3>
-                        <p class="text-slate-500 text-sm mb-6">Tailored solutions for factories, corporate offices, and commercial establishments.</p>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-lg"><i class="fa-solid fa-user-shield text-xl"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900">Security Personnel</h4>
-                                    <p class="text-xs text-slate-500">24/7 Guards, Armed Guards &amp; Supervisors</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-lg"><i class="fa-solid fa-users text-xl"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900">Manpower Supply</h4>
-                                    <p class="text-xs text-slate-500">Skilled, Semi-skilled &amp; Unskilled Industrial Staff</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-lg"><i class="fa-solid fa-broom text-xl"></i></div>
-                                <div>
-                                    <h4 class="font-bold text-slate-900">Facility Maintenance</h4>
-                                    <p class="text-xs text-slate-500">Deep Cleaning &amp; Housekeeping Staff</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======= Trusted By Clients ======= -->
-        <section id="clients" class="bg-white scroll-mt-24" aria-label="Trusted by clients">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-eyebrow justify-center">Our Clientele</div>
-                    <h2 class="font-extrabold text-slate-900 mt-3 leading-tight">
-                        Trusted By Industrial Units, Factories &amp; Corporate Offices
-                        <span class="text-amber-600">Across Bhopal &amp; M.P.</span>
-                    </h2>
-                </div>
-
-                <div class="clients-splide splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <!-- Healthcare -->
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/bhopal-fracture-hospital.svg" alt="Bhopal Fracture Hospital logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Healthcare</figcaption>
-                                </figure>
-                            </li>
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/globus-hospital.svg" alt="Globus Hospital logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Healthcare</figcaption>
-                                </figure>
-                            </li>
-
-                            <!-- Industrial / Corporate -->
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/camp-mandideep.svg" alt="CAMP Mandideep logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Industrial</figcaption>
-                                </figure>
-                            </li>
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/surevin-bpo.svg" alt="Surevin BPO logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Corporate</figcaption>
-                                </figure>
-                            </li>
-
-                            <!-- Hospitality -->
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/ranjits-golden-oak.svg" alt="Ranjit's Golden Oak Resort logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Hospitality</figcaption>
-                                </figure>
-                            </li>
-
-                            <!-- Educational -->
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/ankur-school.svg" alt="Ankur School logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Education</figcaption>
-                                </figure>
-                            </li>
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/govt-benazeer-college.svg" alt="Govt. Benazeer College logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Education</figcaption>
-                                </figure>
-                            </li>
-
-                            <!-- Township -->
-                            <li class="splide__slide">
-                                <figure class="client-card">
-                                    <img src="/assets/images/clients/landmark-city.svg" alt="Landmark City logo"
-                                         class="client-logo" loading="lazy">
-                                    <figcaption>Township</figcaption>
-                                </figure>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <p class="text-center mt-10">
-                    <a href="#contact" class="client-more-link">
-                        + Many more across Bhopal &amp; M.P.
-                        <i class="fa-solid fa-arrow-right ml-1"></i>
-                    </a>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" id="home">
+        <div class="hero-grid-lines"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Bhopal's Trusted Industrial Security &amp; Manpower Partner
+                </span>
+                <h1>Complete Manpower &amp; Security Solutions for Your Business</h1>
+                <p class="subtitle">
+                    100% verified staff, round-the-clock supervision and full PF/ESIC compliance —
+                    protecting hospitals, factories, corporate hubs and warehouses across Bhopal
+                    and all of Madhya Pradesh.
                 </p>
-            </div>
-        </section>
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about-section scroll-mt-24">
-            <div class="about-container">
-                <div class="about-header section-header reveal">
-                    <div class="section-eyebrow justify-center">About Our Company</div>
-                    <h2 class="about-heading">About Vindhya Industrial Force</h2>
-                    <p class="about-subheading">Your Trusted Partner in Manpower &amp; Industrial Solutions Across M.P.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        Request Free Audit <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Get Instant Quote</a>
                 </div>
-                <div class="about-body reveal">
-                    <p>
-                        <strong>Vindhya Industrial Force</strong> is a premier workforce and facility management
-                        service provider based in Bhopal, Madhya Pradesh. We supply verified security, housekeeping,
-                        and industrial manpower to hospitals, factories, corporate offices, and educational hubs —
-                        ensuring every deployment is dependable, professional, and fully aligned with our clients&apos;
-                        operational needs.
-                    </p>
-                    <p>
-                        From trained guards and sanitation teams to skilled support staff, our disciplined workforce is
-                        thoroughly background-verified and supervised round the clock. With a strong compliance-first
-                        approach and a proven track record across the state, we help businesses run safely, cleanly,
-                        and without disruption — every single day.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="bg-slate-100 scroll-mt-24">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-eyebrow justify-center">What We Provide</div>
-                    <h2 class="font-extrabold text-slate-900 mt-2">Comprehensive Services</h2>
-                    <p class="text-slate-500 mt-4">High-quality manpower and security solutions tailored precisely to meet your operational requirements.</p>
-                </div>
-
-                <div class="services-grid">
-                    <article class="service-card flex flex-col justify-between">
-                        <div>
-                            <div class="w-14 h-14 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-shield-dog"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Industrial Security</h3>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                                Trained security guards, night watchmen, and field supervisors for premises surveillance, access control, and asset protection.
-                            </p>
-                        </div>
-                        <a href="#contact" class="card-link">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
-                    </article>
-
-                    <article class="service-card flex flex-col justify-between">
-                        <div>
-                            <div class="w-14 h-14 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-users-gear"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Manpower Outsourcing</h3>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                                Skilled, semi-skilled, and general labor workforce for factories, warehouses, construction sites, and production lines.
-                            </p>
-                        </div>
-                        <a href="#contact" class="card-link">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
-                    </article>
-
-                    <article class="service-card flex flex-col justify-between">
-                        <div>
-                            <div class="w-14 h-14 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-pump-soap"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Housekeeping &amp; Facility Management</h3>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                                Professional cleaning staff, sanitation services, and daily maintenance personnel for corporate offices and industrial sites.
-                            </p>
-                        </div>
-                        <a href="#contact" class="card-link">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
-                    </article>
-
-                    <article class="service-card flex flex-col justify-between">
-                        <div>
-                            <div class="w-14 h-14 bg-slate-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6"><i class="fa-solid fa-headset"></i></div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-3">Corporate Support Staff</h3>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">
-                                Pantry boys, office attendants, pantry staff, and administrative support staff for seamless office management.
-                            </p>
-                        </div>
-                        <a href="#contact" class="card-link">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======= Why Choose Us ======= -->
-        <section id="why-us" class="why-us-section scroll-mt-24">
-            <div class="why-us-container">
-                <div class="why-us-header section-header">
-                    <div class="section-eyebrow justify-center">Our Advantage</div>
-                    <h2 class="why-us-heading">Why Choose Vindhya Industrial Force?</h2>
-                </div>
-
-                <div class="why-us-grid">
-                    <article class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-user-check"></i></div>
-                        <h3 class="why-card-title">Verified &amp; Trained Staff</h3>
-                        <p class="why-card-text">Thorough background checks, police verification, and domain training.</p>
-                    </article>
-
-                    <article class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
-                        <h3 class="why-card-title">24/7 Dedicated Support</h3>
-                        <p class="why-card-text">Round-the-clock management for emergencies and fast workforce replacement.</p>
-                    </article>
-
-                    <article class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                        <h3 class="why-card-title">Full Legal Compliance</h3>
-                        <p class="why-card-text">100% compliance with EPF, ESIC, minimum wages, and M.P. labor laws.</p>
-                    </article>
-
-                    <article class="why-card reveal">
-                        <div class="why-icon"><i class="fa-solid fa-industry"></i></div>
-                        <h3 class="why-card-title">Industry-Specific Expertise</h3>
-                        <p class="why-card-text">Specialized solutions for healthcare hygiene, factory safety, and campus security.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======= Contact Section (Netlify Form) ======= -->
-        <section id="contact" class="bg-slate-900 text-white relative scroll-mt-24">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-eyebrow justify-center">Get In Touch</div>
-                    <h2 class="font-extrabold mt-2">Contact Vindhya Industrial Force</h2>
-                    <p class="text-slate-400 mt-4">Send us your requirement and our management team will reach out to you promptly.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <!-- Contact Details -->
-                    <div class="lg:col-span-5 space-y-6">
-                        <div class="bg-slate-800/70 p-8 rounded-2xl border border-slate-700/60 space-y-6">
-                            <h3 class="text-xl font-bold text-amber-400 border-b border-slate-700 pb-3">Official Contact Details</h3>
-
-                            <div class="flex items-start gap-4">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-user-gear text-xl"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-400 font-medium">Proprietor</p>
-                                    <p class="font-bold text-white text-lg">Mamta Mishra</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-location-dot text-xl"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-400 font-medium">Office Address</p>
-                                    <p class="text-slate-200 text-sm leading-relaxed">EM 35-104, IBD Hallmark City, Kolar Road, Bhopal, Madhya Pradesh - 462042</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-phone text-xl"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-400 font-medium">Phone / Call Directly</p>
-                                    <a href="tel:+919425655443" class="font-bold text-amber-400 hover:underline text-lg">+91-9425655443</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-envelope text-xl"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-400 font-medium">Email Address</p>
-                                    <a href="mailto:vif.bhopal@gmail.com" class="text-slate-200 hover:text-amber-400 text-sm">vif.bhopal@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="bg-slate-900 text-amber-400 p-3 rounded-xl"><i class="fa-brands fa-whatsapp text-xl"></i></div>
-                                <div>
-                                    <p class="text-xs text-slate-400 font-medium">WhatsApp</p>
-                                    <a href="https://wa.me/919425655443" target="_blank" rel="noopener" class="text-slate-200 hover:text-amber-400 text-sm">Chat instantly on WhatsApp</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <span class="check"><i class="fa-solid fa-check"></i></span> Verified Staff
                     </div>
-
-                    <!-- Netlify Contact Form -->
-                    <div class="lg:col-span-7 bg-white text-slate-900 p-8 rounded-2xl shadow-xl">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-6">Send An Inquiry</h3>
-
-                        <form id="inquiryForm" name="contact" method="POST" action="/thank-you.html"
-                              data-netlify="true" netlify-honeypot="bot-field" novalidate>
-
-                            <!-- Netlify hidden fields -->
-                            <input type="hidden" name="form-name" value="contact">
-                            <p class="hidden" aria-hidden="true">
-                                <label>Don&apos;t fill this out if you&apos;re human: <input name="bot-field"></label>
-                            </p>
-
-                            <div class="space-y-5">
-                                <div class="field-group">
-                                    <label for="name" class="block text-sm font-semibold text-slate-700 mb-1">Your Full Name *</label>
-                                    <input type="text" id="name" name="name" placeholder="e.g. Ramesh Kumar"
-                                           class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500" autocomplete="name">
-                                    <p class="field-error" id="name-error" aria-live="polite"></p>
-                                </div>
-
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <div class="field-group">
-                                        <label for="phone" class="block text-sm font-semibold text-slate-700 mb-1">Phone Number *</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="10-digit mobile no."
-                                               class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500" autocomplete="tel">
-                                        <p class="field-error" id="phone-error" aria-live="polite"></p>
-                                    </div>
-                                    <div class="field-group">
-                                        <label for="service" class="block text-sm font-semibold text-slate-700 mb-1">Service Required</label>
-                                        <select id="service" name="service" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
-                                            <option value="Industrial Security">Industrial Security</option>
-                                            <option value="Manpower Outsourcing">Manpower Outsourcing</option>
-                                            <option value="Housekeeping & Facility Management">Housekeeping &amp; Facility Management</option>
-                                            <option value="Corporate Support Staff">Corporate Support Staff</option>
-                                            <option value="Other Services">Other / Multiple Services</option>
-                                        </select>
-                                        <p class="field-error" id="service-error" aria-live="polite"></p>
-                                    </div>
-                                </div>
-
-                                <div class="field-group">
-                                    <label for="message" class="block text-sm font-semibold text-slate-700 mb-1">Message / Requirements</label>
-                                    <textarea id="message" name="message" rows="4" placeholder="Staff required, location, shift &amp; strength..."
-                                              class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
-                                    <p class="field-error" id="message-error" aria-live="polite"></p>
-                                </div>
-
-                                <div id="formAlert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold text-center" role="status"></div>
-
-                                <button type="submit" id="submitBtn" class="btn-primary w-full justify-center">
-                                    Submit Inquiry <i class="fa-solid fa-paper-plane ml-2"></i>
-                                </button>
-                            </div>
-                        </form>
+                    <div class="trust-item">
+                        <span class="check"><i class="fa-solid fa-check"></i></span> 24/7 Operations
+                    </div>
+                    <div class="trust-item">
+                        <span class="check"><i class="fa-solid fa-check"></i></span> PF / ESIC Compliant
+                    </div>
+                    <div class="trust-item">
+                        <span class="check"><i class="fa-solid fa-check"></i></span> Cover MP
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- ======= Footer ======= -->
-    <footer class="bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800">
+    <!-- ═══ SERVICES ═══ -->
+    <section class="section" id="services">
         <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-slate-800/70">
-                <div class="space-y-3">
-                    <div class="flex items-center space-x-3">
-                        <img src="/assets/images/logo.png" alt="Vindhya Industrial Force logo" class="h-10 w-10">
-                        <div class="leading-tight">
-                            <span class="text-lg font-extrabold text-white block">VINDHYA</span>
-                            <span class="text-[10px] tracking-widest font-semibold text-amber-500 block uppercase">Industrial Force</span>
-                        </div>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Trusted industrial security &amp; manpower outsourcing partner for businesses across Bhopal and Madhya Pradesh.
-                    </p>
-                    <p class="text-xs text-slate-600">Proprietor: <span class="text-slate-400 font-medium">Mamta Mishra</span></p>
-                </div>
+            <div class="section-header reveal">
+                <span class="overline">What We Deliver</span>
+                <h2>Comprehensive Security &amp; Manpower Services</h2>
+                <p class="subtitle">One partner for every workforce and security requirement — disciplined, compliant and always accountable.</p>
+            </div>
 
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Quick Links</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#home" class="hover:text-amber-400 transition-colors">Home</a></li>
-                        <li><a href="#about" class="hover:text-amber-400 transition-colors">About Us</a></li>
-                        <li><a href="#services" class="hover:text-amber-400 transition-colors">Services</a></li>
-                        <li><a href="#why-us" class="hover:text-amber-400 transition-colors">Why Choose Us</a></li>
-                        <li><a href="#contact" class="hover:text-amber-400 transition-colors">Contact Us</a></li>
+            <div class="services-split">
+                <!-- Security Solutions -->
+                <div class="service-panel security reveal">
+                    <div class="panel-icon"><i class="fa-solid fa-shield-dog"></i></div>
+                    <h3>Security Solutions</h3>
+                    <p class="panel-desc">Background-verified, professionally trained security personnel for every threat level — from routine gate duty to armed response.</p>
+                    <ul class="service-list">
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-user-shield"></i></span>
+                            <div class="s-text">
+                                <h4>Industrial Security Guards</h4>
+                                <p>Uniformed guards, night watchmen and supervisors for premises surveillance, access control and asset protection.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-user-check"></i></span>
+                            <div class="s-text">
+                                <h4>Armed Guards &amp; Field Supervisors</h4>
+                                <p>Licensed armed personnel and verified supervisors for factories, banks and high-risk facilities.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-tower-broadcast"></i></span>
+                            <div class="s-text">
+                                <h4>24/7 Site Supervision</h4>
+                                <p>Dedicated supervisors conducting shift audits, incident response and rapid staff replacement.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-lock"></i></span>
+                            <div class="s-text">
+                                <h4>Access Control &amp; Patrolling</h4>
+                                <p>Gate management, visitor logging and night patrolling with documented reporting.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="space-y-3">
-                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Registered Office</h4>
-                    <address class="text-sm text-slate-500 not-italic leading-relaxed">
-                        EM 35-104, IBD Hallmark City,<br>
-                        Kolar Road, Bhopal,<br>
-                        Madhya Pradesh - 462042
-                    </address>
-                    <div class="space-y-1.5 text-sm pt-1">
-                        <a href="tel:+919425655443" class="flex items-center gap-2 hover:text-amber-400 transition-colors"><i class="fa-solid fa-phone text-amber-500"></i> +91-9425655443</a>
-                        <a href="mailto:vif.bhopal@gmail.com" class="flex items-center gap-2 hover:text-amber-400 transition-colors"><i class="fa-solid fa-envelope text-amber-500"></i> vif.bhopal@gmail.com</a>
+                <!-- Manpower & Facility -->
+                <div class="service-panel facility reveal reveal-delay-1">
+                    <div class="panel-icon"><i class="fa-solid fa-users-gear"></i></div>
+                    <h3>Manpower &amp; Facility Solutions</h3>
+                    <p class="panel-desc">Skilled, semi-skilled and general staff to keep your operations running safely, cleanly and without disruption.</p>
+                    <ul class="service-list">
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-users"></i></span>
+                            <div class="s-text">
+                                <h4>Manpower Outsourcing</h4>
+                                <p>Verified industrial workforce for factories, warehouses, construction sites and production lines.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-broom"></i></span>
+                            <div class="s-text">
+                                <h4>Housekeeping &amp; Facility Management</h4>
+                                <p>Professional cleaning staff, sanitation teams and daily maintenance personnel for offices and sites.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-headset"></i></span>
+                            <div class="s-text">
+                                <h4>Corporate Support Staff</h4>
+                                <p>Pantry boys, office attendants and administrative support personnel for seamless office management.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="s-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+                            <div class="s-text">
+                                <h4>100% Statutory Compliance</h4>
+                                <p>Full PF, ESIC, minimum wages and M.P. labour law compliance — zero legal risk for your organisation.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ OUR CLIENTELE / SECTORS ═══ -->
+    <section class="section clients" id="clients">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="overline">Our Clientele</span>
+                <h2>Trusted Across Hospitals, Factories &amp; Corporates</h2>
+                <p class="subtitle">Tailored security and staffing for every sector you operate in — from Bhopal to every district of M.P.</p>
+            </div>
+
+            <div class="sectors-grid">
+                <!-- Factories -->
+                <div class="sector-card reveal">
+                    <div class="sector-icon"><i class="fa-solid fa-industry"></i></div>
+                    <h3>Factories</h3>
+                    <div class="sector-focus">Industrial &amp; Manufacturing</div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> CAMP Mandideep</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Copper Strip Pvt. Ltd. (Govindpura)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Metal Junction</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Perimeter &amp; armed guard deployment</li>
+                    </ul>
+                    <a href="#contact" class="card-link">Secure Your Plant <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Hospitals -->
+                <div class="sector-card reveal reveal-delay-1">
+                    <div class="sector-icon"><i class="fa-solid fa-hospital"></i></div>
+                    <h3>Hospitals</h3>
+                    <div class="sector-focus">Healthcare &amp; Diagnostics</div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Bhopal Fracture Hospital</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Globus Hospital</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Lifeline Hospital</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Maa Pitambara Multi Speciality Hospital</li>
+                    </ul>
+                    <a href="#contact" class="card-link">Deploy Care Staff <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Corporate Hubs -->
+                <div class="sector-card reveal reveal-delay-2">
+                    <div class="sector-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Corporate Hubs</h3>
+                    <div class="sector-focus">Offices &amp; BPOs</div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Surevin BPO</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Canara Bank</li>
+                        <li><i class="fa-solid fa-circle-check"></i> The Prospera Bhopal</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Front-desk &amp; admin support</li>
+                    </ul>
+                    <a href="#contact" class="card-link">Build Your Team <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Warehouses -->
+                <div class="sector-card reveal reveal-delay-3">
+                    <div class="sector-icon"><i class="fa-solid fa-warehouse"></i></div>
+                    <h3>Warehouses</h3>
+                    <div class="sector-focus">Logistics &amp; Storage</div>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> IBD Hallmark City</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Landmark City township</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mandideep industrial zones</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Night watch &amp; inventory control</li>
+                    </ul>
+                    <a href="#contact" class="card-link">Protect Your Stock <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ WHY US ═══ -->
+    <section class="section section-alt" id="why-us">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="overline">The Vindhya Advantage</span>
+                <h2>Why Businesses Across M.P. Trust Us</h2>
+                <p class="subtitle">We don't just deploy staff — we deploy accountability, compliance and round-the-clock supervision.</p>
+            </div>
+
+            <div class="advantage-grid">
+                <div class="adv-card reveal">
+                    <div class="adv-icon"><i class="fa-solid fa-user-check"></i></div>
+                    <h4>Verified &amp; Trained Staff</h4>
+                    <p>Thorough background checks, police verification and domain training before every deployment.</p>
+                </div>
+                <div class="adv-card reveal reveal-delay-1">
+                    <div class="adv-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h4>24/7 Dedicated Support</h4>
+                    <p>Round-the-clock management for emergencies and fast workforce replacement, all days.</p>
+                </div>
+                <div class="adv-card reveal reveal-delay-2">
+                    <div class="adv-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h4>Full Legal Compliance</h4>
+                    <p>100% compliance with EPF, ESIC, minimum wages and M.P. labor laws — zero legal risk.</p>
+                </div>
+                <div class="adv-card reveal reveal-delay-3">
+                    <div class="adv-icon"><i class="fa-solid fa-industry"></i></div>
+                    <h4>Industry-Specific Expertise</h4>
+                    <p>Specialized solutions for healthcare hygiene, factory safety and campus security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="overline">Get In Touch</span>
+                <h2>Request a Free Site Audit or Instant Quote</h2>
+                <p class="subtitle">Get a response within 24 hours. No obligation, complete transparency.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Netlify Contact Form -->
+                <div class="form-card reveal">
+                    <h3>Send An Inquiry</h3>
+                    <form id="inquiryForm" name="contact" method="POST" action="/thank-you.html"
+                          data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden" aria-hidden="true">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+
+                        <div class="form-alert" id="formAlert" role="status"></div>
+
+                        <div class="field-group">
+                            <label for="name">Your Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Ramesh Kumar" autocomplete="name">
+                            <p class="field-error" id="name-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="10-digit mobile no." autocomplete="tel">
+                            <p class="field-error" id="phone-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="Industrial Security">Industrial Security</option>
+                                <option value="Manpower Outsourcing">Manpower Outsourcing</option>
+                                <option value="Housekeeping & Facility Management">Housekeeping &amp; Facility Management</option>
+                                <option value="Corporate Support Staff">Corporate Support Staff</option>
+                                <option value="Other Services">Other / Multiple Services</option>
+                            </select>
+                            <p class="field-error" id="service-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="message">Message / Requirements</label>
+                            <textarea id="message" name="message" placeholder="Staff required, location, shift &amp; strength..."></textarea>
+                            <p class="field-error" id="message-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" id="submitBtn" class="btn btn-primary btn-lg">
+                                Submit Inquiry <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <p class="form-note">Your information is 100% secure. We never share your details.</p>
+                    </form>
+                </div>
+
+                <!-- Office Details -->
+                <div class="office-card reveal reveal-delay-1">
+                    <h3>Official Contact Details</h3>
+                    <div class="office-block">
+                        <div class="ob-label"><i class="fa-solid fa-user-gear"></i> Registered Office</div>
+                        <div class="ob-value">
+                            <strong>Vindhya Industrial Force</strong><br>
+                            EM 35-104, IBD Hallmark City,<br>
+                            Kolar Road, Bhopal,<br>
+                            Madhya Pradesh - 462042
+                        </div>
+                    </div>
+                    <div class="office-block">
+                        <div class="ob-label"><i class="fa-solid fa-user-check"></i> Proprietor</div>
+                        <div class="ob-value"><strong>Mamta Mishra</strong></div>
+                    </div>
+                    <div class="office-block">
+                        <div class="ob-label"><i class="fa-solid fa-phone"></i> Call Us Directly</div>
+                        <div class="ob-value"><a href="tel:+919425655443">+91-9425655443</a></div>
+                    </div>
+                    <div class="office-block">
+                        <div class="ob-label"><i class="fa-solid fa-envelope"></i> Email Us</div>
+                        <div class="ob-value"><a href="mailto:vif.bhopal@gmail.com">vif.bhopal@gmail.com</a></div>
+                    </div>
+                    <div class="office-block">
+                        <div class="ob-label"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+                        <div class="ob-value"><a href="https://wa.me/919425655443" target="_blank" rel="noopener">Chat instantly on WhatsApp</a></div>
+                    </div>
+                    <div class="office-block">
+                        <div class="ob-label"><i class="fa-solid fa-clock"></i> Operations Desk</div>
+                        <div class="ob-value">Available 24/7 — All Days, Across Madhya Pradesh</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="flex flex-col md:flex-row justify-between items-center gap-3 pt-8 text-xs text-slate-600">
-                <p class="text-xs">&copy; <span id="copyright-year">2025</span> Vindhya Industrial Force. All Rights Reserved.</p>
-                <p class="text-xs flex items-center gap-1.5">
-                    <i class="fa-solid fa-user-shield text-amber-500"></i> Proprietor: Mamta Mishra | Bhopal (M.P.)
-                </p>
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="f-logo">
+                        <img src="/assets/brand-data/logos/VIF_logo.png" alt="Vindhya Industrial Force Logo">
+                        <span>VINDHYA INDUSTRIAL FORCE<small>Security &amp; Manpower</small></span>
+                    </div>
+                    <p>Trusted industrial security &amp; manpower outsourcing partner for hospitals, factories, corporate offices and warehouses across Bhopal and Madhya Pradesh.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Industrial Security</a></li>
+                        <li><a href="#services">Manpower Outsourcing</a></li>
+                        <li><a href="#services">Housekeeping</a></li>
+                        <li><a href="#services">Facility Management</a></li>
+                        <li><a href="#services">Corporate Staff</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="#clients">Factories</a></li>
+                        <li><a href="#clients">Hospitals</a></li>
+                        <li><a href="#clients">Corporate Hubs</a></li>
+                        <li><a href="#clients">Warehouses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="tel:+919425655443">Call +91-9425655443</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2026</span> Vindhya Industrial Force. All Rights Reserved.</p>
+                <div class="f-contact">
+                    <span><i class="fa-solid fa-location-dot"></i> Bhopal, M.P.</span>
+                    <a href="tel:+919425655443">+91-9425655443</a>
+                    <a href="mailto:vif.bhopal@gmail.com">vif.bhopal@gmail.com</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Splide.js carousel library (must load BEFORE main.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/919425655443?text=Hello%20Vindhya%20Industrial%20Force,%20I%20want%20to%20inquire%20about%20your%20services."
+       target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-    <!-- Swiper.js carousel library (must load BEFORE main.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Modular JavaScript -->
     <script src="/js/main.js" defer></script>
 </body>
 </html>

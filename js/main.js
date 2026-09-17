@@ -1,43 +1,64 @@
 /* ============================================================
-   Vindhya Industrial Force — Main JavaScript
-   Mobile nav, scroll-spy, form validation, Netlify submit,
-   scroll-reveal, dynamic year.
+   Vindhya Industrial Force — Enterprise JavaScript
+   Navbar scroll, mobile menu, scroll-spy, scroll-reveal,
+   Netlify form validation & submit, dynamic year.
    ============================================================ */
 
 (function () {
   'use strict';
 
-  // Gracefully bail if required globals are missing
   const doc = document;
 
-  /* ---------- Mobile Navigation Drawer ---------- */
-  const menuBtn = doc.getElementById('menu-btn');
-  const mobileMenu = doc.getElementById('mobile-menu');
+  /* ---------- Navbar: solid background on scroll ---------- */
+  const navbar = doc.getElementById('navbar');
 
-  const setDrawer = (open) => {
-    if (!mobileMenu || !menuBtn) return;
-    mobileMenu.classList.toggle('is-open', open);
-    menuBtn.setAttribute('aria-expanded', String(open));
+  const onNavScroll = () => {
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
   };
 
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      setDrawer(!mobileMenu.classList.contains('is-open'));
+  window.addEventListener('scroll', onNavScroll, { passive: true });
+  onNavScroll();
+
+  /* ---------- Mobile Navigation Menu ---------- */
+  const hamburger = doc.getElementById('hamburger');
+  const navLinks = doc.getElementById('navLinks');
+
+  const closeMenu = () => {
+    if (!navLinks || !hamburger) return;
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+  };
+
+  const toggleMenu = () => {
+    if (!navLinks || !hamburger) return;
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  };
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close the menu when any internal link is tapped
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
     });
 
-    // Close drawer when any internal link is tapped
-    doc.querySelectorAll('.drawer-link, .drawer-cta a').forEach((link) => {
-      link.addEventListener('click', () => setDrawer(false));
+    // Close when the viewport grows back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991) closeMenu();
     });
   }
 
-  /* ---------- Active Nav Link Highlight (Scroll Spy) ---------- */
-  const sections = doc.querySelectorAll('main section[id]');
-  const navLinks = doc.querySelectorAll('.nav-link');
+  /* ---------- Scroll-Spy: Active Nav Link Highlight ---------- */
+  const sections = doc.querySelectorAll('section[id]');
+  const linkEls = Array.from(doc.querySelectorAll('.nav-links a[href^="#"]:not(.nav-cta)'));
 
   const setActiveLink = (id) => {
-    navLinks.forEach((link) => {
-      const target = link.getAttribute('href')?.slice(1);
+    linkEls.forEach((link) => {
+      const target = link.getAttribute('href').slice(1);
       const isActive = target === id;
       link.classList.toggle('active', isActive);
       if (isActive) {
@@ -48,9 +69,9 @@
     });
   };
 
-  const onScroll = () => {
+  const onScrollSpy = () => {
     if (!sections.length) return;
-    const scrollPos = window.scrollY + 140; // sticky-header offset
+    const scrollPos = window.scrollY + 120;
     let currentId = sections[0].id;
 
     sections.forEach((section) => {
@@ -59,7 +80,6 @@
       }
     });
 
-    // If near the bottom, force the last section active
     if (window.innerHeight + window.scrollY >= doc.body.offsetHeight - 10) {
       currentId = sections[sections.length - 1].id;
     }
@@ -67,8 +87,8 @@
     setActiveLink(currentId);
   };
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', onScrollSpy, { passive: true });
+  onScrollSpy();
 
   /* ---------- Scroll-Reveal on Enter ---------- */
   const revealEls = doc.querySelectorAll('.reveal');
@@ -78,7 +98,7 @@
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
         });
@@ -87,81 +107,19 @@
     );
     revealEls.forEach((el) => revealObserver.observe(el));
   } else {
-    revealEls.forEach((el) => el.classList.add('is-visible'));
+    revealEls.forEach((el) => el.classList.add('visible'));
   }
 
-  /* ---------- Trusted By Clients Carousel (Splide) ---------- */
-  if (window.Splide) {
-    const clientsEl = doc.querySelector('.clients-splide');
-    if (clientsEl) {
-      new window.Splide(clientsEl, {
-        type: 'loop',
-        autoplay: true,
-        interval: 3000,
-        pauseOnHover: true,
-        speed: 800,
-        arrows: false,
-        pagination: false,
-        gap: '2.5rem',
-        perPage: 6,
-        breakpoints: {
-          1280: { perPage: 5 },
-          1024: { perPage: 3 },
-          640: { perPage: 2 }
-        }
-      }).mount();
-    }
-  }
-
-  /* ---------- Hero / Services Image Carousel (Swiper) ---------- */
-  if (window.Swiper) {
-    const heroSwiperEl = doc.querySelector('.hero-swiper');
-    if (heroSwiperEl) {
-      new window.Swiper(heroSwiperEl, {
-        loop: true,
-        speed: 800,
-        spaceBetween: 0,
-        grabCursor: true,
-        autoplay: {
-          delay: 4500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true
-        },
-        effect: 'fade',
-        fadeEffect: { crossFade: true },
-        pagination: {
-          el: heroSwiperEl.querySelector('.swiper-pagination'),
-          clickable: true
-        },
-        navigation: {
-          nextEl: heroSwiperEl.querySelector('.swiper-button-next'),
-          prevEl: heroSwiperEl.querySelector('.swiper-button-prev')
-        },
-        breakpoints: {
-          768: {
-            effect: 'slide',
-            slidesPerView: 1,
-            autoplay: {
-              delay: 4500,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true
-            }
-          }
-        }
-      });
-    }
-  }
-
-  // ============================================================
-  // Contact Form — validation + Netlify submit
-  // ============================================================
+  /* ============================================================
+     Contact Form — validation + Netlify submit
+     ============================================================ */
   const form = doc.getElementById('inquiryForm');
   const submitBtn = doc.getElementById('submitBtn');
   const formAlert = doc.getElementById('formAlert');
 
   const setFieldError = (field, message) => {
     const group = field.closest('.field-group');
-    if (!group) return;
+    if (!group) return true;
     const errorEl = group.querySelector('.field-error');
     group.classList.toggle('is-invalid', Boolean(message));
 
@@ -183,25 +141,38 @@
 
       case 'phone': {
         if (!val) return setFieldError(field, 'Please enter your phone number.');
-        // Normalise: strip spaces/dashes and any +91 / leading 0 country prefix
         const digits = val.replace(/[\s-]/g, '').replace(/^\+91/, '').replace(/^0/, '');
-        // Indian mobile: exactly 10 digits starting 6-9
         if (!/^[6-9]\d{9}$/.test(digits)) {
           return setFieldError(field, 'Enter a valid 10-digit mobile number.');
         }
         return setFieldError(field, '');
       }
 
-      case 'message':
-        if (val && val.length < 10) return setFieldError(field, 'Message is too short (min 10 characters).');
-        return setFieldError(field, '');
-
       case 'service':
         if (!val) return setFieldError(field, 'Please select a service.');
         return setFieldError(field, '');
 
+      case 'message':
+        if (val && val.length < 10) return setFieldError(field, 'Message is too short (min 10 characters).');
+        return setFieldError(field, '');
+
       default:
         return true;
+    }
+  };
+
+  const showAlert = (type, message) => {
+    if (!formAlert) return;
+    formAlert.classList.remove('success', 'error', 'show');
+    // Force reflow so the class re-triggers between submits
+    void formAlert.offsetWidth;
+    formAlert.textContent = message;
+    formAlert.classList.add(type, 'show');
+  };
+
+  const hideAlert = () => {
+    if (formAlert) {
+      formAlert.classList.remove('success', 'error', 'show');
     }
   };
 
@@ -210,7 +181,7 @@
       .map((id) => doc.getElementById(id))
       .filter(Boolean);
 
-    // Live validation once the user has attempted submission or blurred a field
+    // Live validation once the user has blurred a field or attempted submission
     fields.forEach((field) => {
       field.addEventListener('blur', () => validateField(field));
 
@@ -223,8 +194,8 @@
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      hideAlert();
 
-      // Validate all fields
       const results = fields.map((field) => validateField(field));
       const isValid = results.every(Boolean);
 
@@ -234,13 +205,14 @@
           const input = firstInvalid.querySelector('input, select, textarea');
           if (input) input.focus();
         }
+        showAlert('error', 'Please fix the highlighted fields and try again.');
         return;
       }
 
       // Disable button while submitting
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Submitting… <i class="fa-solid fa-spinner fa-spin ml-2"></i>';
+        submitBtn.innerHTML = 'Submitting… <i class="fa-solid fa-spinner fa-spin"></i>';
       }
 
       // Netlify AJAX-friendly POST to the same page. Netlify's
@@ -254,7 +226,6 @@
         body: payload.toString()
       })
         .then((res) => {
-          // Netlify returns a 200 (or redirect) when accepted
           if (res.ok || res.redirected) {
             window.location.href = '/thank-you.html';
           } else {
@@ -264,15 +235,9 @@
         .catch(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Submit Inquiry <i class="fa-solid fa-paper-plane ml-2"></i>';
+            submitBtn.innerHTML = 'Submit Inquiry <i class="fa-solid fa-paper-plane"></i>';
           }
-          if (formAlert) {
-            formAlert.classList.remove('hidden');
-            formAlert.textContent =
-              'Something went wrong submitting the form. Please try again or call us at +91-9425655443.';
-            formAlert.classList.remove('bg-emerald-50', 'border-emerald-200', 'text-emerald-800');
-            formAlert.classList.add('bg-red-50', 'border-red-200', 'text-red-700');
-          }
+          showAlert('error', 'Something went wrong submitting the form. Please try again or call us at +91-9425655443.');
         });
     });
   }
