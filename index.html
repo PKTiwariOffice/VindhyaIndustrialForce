@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vindhya Industrial Force | Industrial, Manpower & Security Solutions Bhopal</title>
+    <meta name="description" content="Vindhya Industrial Force - Premier provider of Security Services, Manpower Outsourcing, Housekeeping, and Industrial Support in Bhopal, MP. Led by Proprietor Mamta Mishra.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+919425655443" class="hover:text-amber-400 transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-amber-500"></i> +91-9425655443
+                </a>
+                <a href="mailto:vif.bhopal@gmail.com" class="hover:text-amber-400 transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-amber-500"></i> vif.bhopal@gmail.com
+                </a>
+            </div>
+            <div class="text-xs text-slate-400 flex items-center gap-2">
+                <i class="fa-solid fa-user-check text-amber-500"></i> Proprietor: <span class="text-slate-200 font-medium">Mamta Mishra</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-900 text-amber-400 rounded-lg flex items-center justify-center font-bold text-2xl shadow-md border-2 border-amber-500">
+                        VIF
+                    </div>
+                    <div>
+                        <span class="text-xl md:text-2xl font-extrabold text-blue-950 block leading-tight">VINDHYA</span>
+                        <span class="text-xs tracking-wider font-semibold text-amber-600 block uppercase">Industrial Force</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Menu -->
+                <nav class="hidden md:flex space-x-8 font-medium text-slate-700">
+                    <a href="#home" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-amber-500">Home</a>
+                    <a href="#about" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-amber-500">About Us</a>
+                    <a href="#services" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-amber-500">Services</a>
+                    <a href="#why-us" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-amber-500">Why Choose Us</a>
+                    <a href="#contact" class="hover:text-blue-900 transition-colors py-2 border-b-2 border-transparent hover:border-amber-500">Contact Us</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="hidden md:block">
+                    <a href="https://wa.me/919425655443?text=Hello%20Vindhya%20Industrial%20Force,%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-700 hover:text-blue-900 focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 text-white px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="block py-2 px-3 hover:bg-slate-800 rounded font-medium text-amber-400">Home</a>
+            <a href="#about" class="block py-2 px-3 hover:bg-slate-800 rounded font-medium">About Us</a>
+            <a href="#services" class="block py-2 px-3 hover:bg-slate-800 rounded font-medium">Services</a>
+            <a href="#why-us" class="block py-2 px-3 hover:bg-slate-800 rounded font-medium">Why Choose Us</a>
+            <a href="#contact" class="block py-2 px-3 hover:bg-slate-800 rounded font-medium">Contact Us</a>
+            <div class="pt-2">
+                <a href="tel:+919425655443" class="block text-center w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-lg shadow">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-950 via-slate-900 to-blue-900 text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 border border-amber-500/30 px-3.5 py-1.5 rounded-full text-sm font-semibold">
+                        <i class="fa-solid fa-shield-halved"></i> Reliable Industrial & Security Force
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+                        Complete Manpower & Security Solutions for Your Business
+                    </h1>
+                    <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+                        Vindhya Industrial Force provides highly trained security staff, skilled & unskilled manpower, and comprehensive facility management services across Bhopal and Madhya Pradesh.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-center">
+                            Get A Free Quote <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="tel:+919425655443" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-8 py-4 rounded-xl border border-slate-700 shadow-md transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-amber-400"></i> Call +91-9425655443
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Contact Card / Feature Highlights -->
+                <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-100">
+                    <h3 class="text-2xl font-bold text-blue-950 mb-2">Our Core Expertise</h3>
+                    <p class="text-slate-600 text-sm mb-6">Tailored solutions for factories, corporate offices, and commercial establishments.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl">
+                            <div class="bg-blue-900 text-amber-400 p-3 rounded-lg"><i class="fa-solid fa-user-shield text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Security Personnel</h4>
+                                <p class="text-xs text-slate-600">24/7 Guards, Armed Guards & Supervisors</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl">
+                            <div class="bg-blue-900 text-amber-400 p-3 rounded-lg"><i class="fa-solid fa-users text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Manpower Supply</h4>
+                                <p class="text-xs text-slate-600">Skilled, Semi-skilled & Unskilled Industrial Staff</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl">
+                            <div class="bg-blue-900 text-amber-400 p-3 rounded-lg"><i class="fa-solid fa-broom text-xl"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Facility Maintenance</h4>
+                                <p class="text-xs text-slate-600">Deep Cleaning & Housekeeping Staff</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="text-amber-600 font-extrabold uppercase text-sm tracking-wider">About Our Company</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Empowering Industries with Trusted & Verified Staff
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        <strong class="text-slate-900">Vindhya Industrial Force</strong> is a premier service provider in Bhopal, Madhya Pradesh, operating under the leadership of <strong class="text-slate-900">Proprietor Mamta Mishra</strong>. 
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        We specialize in delivering top-tier industrial security services, manpower outsourcing, facility housekeeping, and maintenance support. Our mission is to ensure smooth operational continuity for industrial units, warehouses, commercial complexes, and private premises through verified, highly disciplined workforce.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <h4 class="text-3xl font-extrabold text-blue-950">100%</h4>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Background Verified Staff</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl">
+                            <h4 class="text-3xl font-extrabold text-amber-600">24/7</h4>
+                            <p class="text-xs font-semibold text-slate-600 mt-1">Supervision & Support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-900 to-slate-900 p-8 rounded-3xl text-white shadow-xl relative">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold border-b border-slate-700 pb-4 text-amber-400">Company Overview</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+                                <span><strong>Proprietor:</strong> Mamta Mishra</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+                                <span><strong>Headquarters:</strong> Bhopal, Madhya Pradesh</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+                                <span><strong>Address:</strong> EM 35-104, IBD Hallmark City, Kolar Road, Bhopal - 462042</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400 mt-1"></i>
+                                <span><strong>Core Focus:</strong> Safety, Compliance, Efficiency, and Operational Reliability</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-amber-600 font-extrabold uppercase text-sm tracking-wider">What We Provide</div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Comprehensive Services</h2>
+                <p class="text-slate-600 mt-4">High-quality manpower and security solutions tailored precisely to meet your operational requirements.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-shield-dog"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Industrial Security</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Trained security guards, night watchmen, and field supervisors for premises surveillance, access control, and asset protection.
+                        </p>
+                    </div>
+                    <a href="#contact" class="text-blue-900 font-semibold text-sm hover:text-amber-600 inline-flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Manpower Outsourcing</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Skilled, semi-skilled, and general labor workforce for factories, warehouses, construction sites, and production lines.
+                        </p>
+                    </div>
+                    <a href="#contact" class="text-blue-900 font-semibold text-sm hover:text-amber-600 inline-flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Housekeeping & Facility</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Professional cleaning staff, sanitation services, and daily maintenance personnel for corporate offices and industrial sites.
+                        </p>
+                    </div>
+                    <a href="#contact" class="text-blue-900 font-semibold text-sm hover:text-amber-600 inline-flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-900 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Corporate Support Staff</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Pantry boys, office attendants, pantry staff, and administrative support staff for seamless office management.
+                        </p>
+                    </div>
+                    <a href="#contact" class="text-blue-900 font-semibold text-sm hover:text-amber-600 inline-flex items-center gap-1">Enquire Now <i class="fa-solid fa-chevron-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="text-amber-600 font-extrabold uppercase text-sm tracking-wider">Our Advantage</div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 mb-6">Why Choose Vindhya Industrial Force?</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Rigorous Background Verification</h4>
+                                <p class="text-slate-600 text-sm mt-1">Every security guard and worker undergoes strict background checks and identity checks before deployment.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Prompt & Reliable Service</h4>
+                                <p class="text-slate-600 text-sm mt-1">We maintain standby teams to ensure zero downtime and immediate replacement when required.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg">Customized Plans for Clients</h4>
+                                <p class="text-slate-600 text-sm mt-1">Flexible contractual shifts, daily or monthly billing structures based on business requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 text-white p-8 md:p-10 rounded-3xl shadow-xl space-y-6 border-l-8 border-amber-500">
+                    <h3 class="text-2xl font-bold">Ready to secure & empower your business?</h3>
+                    <p class="text-slate-300">Contact our administrative team today for custom quotes and contract details.</p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span class="font-bold text-lg">+91-9425655443</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-amber-400"></i>
+                            <span>vif.bhopal@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-amber-400 font-extrabold uppercase text-sm tracking-wider">Get In Touch</div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Contact Vindhya Industrial Force</h2>
+                <p class="text-slate-400 mt-4">Send us your requirement, and our management team will reach out to you promptly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 space-y-6">
+                        <h3 class="text-xl font-bold text-amber-400 border-b border-slate-700 pb-3">Official Contact Details</h3>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/60 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-user-gear text-xl"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Proprietor</p>
+                                <p class="font-bold text-white text-lg">Mamta Mishra</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/60 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-location-dot text-xl"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Office Address</p>
+                                <p class="text-slate-200 text-sm leading-relaxed">
+                                    EM 35-104, IBD Hallmark City, Kolar Road, Bhopal, Madhya Pradesh - 462042
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/60 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-phone text-xl"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Phone / Call Directly</p>
+                                <a href="tel:+919425655443" class="font-bold text-amber-400 hover:underline text-lg">+91-9425655443</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-900/60 text-amber-400 p-3 rounded-xl"><i class="fa-solid fa-envelope text-xl"></i></div>
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Email Address</p>
+                                <a href="mailto:vif.bhopal@gmail.com" class="text-slate-200 hover:text-amber-400 text-sm">vif.bhopal@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-white text-slate-900 p-8 rounded-2xl shadow-xl">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Send An Inquiry</h3>
+                    <form id="inquiryForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                            <input type="text" id="name" required placeholder="Name" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                <input type="tel" id="phone" required placeholder="Phone Number" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-1">Service Required</label>
+                                <select id="service" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white">
+                                    <option>Industrial Security</option>
+                                    <option>Manpower Supply</option>
+                                    <option>Housekeeping & Cleaning</option>
+                                    <option>Corporate Support Staff</option>
+                                    <option>Other Services</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Message / Requirements</label>
+                            <textarea id="message" rows="4" placeholder="Mention your requirements here..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-blue-900 hover:bg-blue-950 text-amber-400 font-bold py-4 rounded-xl shadow-lg transition-all text-center">
+                            Submit Inquiry <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="formAlert" class="hidden mt-4 p-4 rounded-xl bg-emerald-100 text-emerald-800 text-sm font-semibold text-center">
+                        Thank you! Your query has been logged. We will contact you shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <div>
+                <p>&copy; Vindhya Industrial Force. All Rights Reserved.</p>
+                <p class="text-xs text-slate-500 mt-1">Proprietor: Mamta Mishra | Bhopal (M.P.)</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#home" class="hover:text-amber-400">Home</a>
+                <a href="#services" class="hover:text-amber-400">Services</a>
+                <a href="#contact" class="hover:text-amber-400">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple Form Submission Handler
+        const inquiryForm = document.getElementById('inquiryForm');
+        const formAlert = document.getElementById('formAlert');
+
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // Open WhatsApp with prefilled message
+            const waText = `New Inquiry from Website:%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0AMessage: ${encodeURIComponent(message)}`;
+            window.open(`https://wa.me/919425655443?text=${waText}`, '_blank');
+
+            formAlert.classList.remove('hidden');
+            inquiryForm.reset();
+        });
+    </script>
+</body>
+</html>
