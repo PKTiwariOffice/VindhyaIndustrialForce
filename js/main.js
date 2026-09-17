@@ -113,6 +113,45 @@
     }
   }
 
+  /* ---------- Hero / Services Image Carousel (Swiper) ---------- */
+  if (window.Swiper) {
+    const heroSwiperEl = doc.querySelector('.hero-swiper');
+    if (heroSwiperEl) {
+      new window.Swiper(heroSwiperEl, {
+        loop: true,
+        speed: 800,
+        spaceBetween: 0,
+        grabCursor: true,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        pagination: {
+          el: heroSwiperEl.querySelector('.swiper-pagination'),
+          clickable: true
+        },
+        navigation: {
+          nextEl: heroSwiperEl.querySelector('.swiper-button-next'),
+          prevEl: heroSwiperEl.querySelector('.swiper-button-prev')
+        },
+        breakpoints: {
+          768: {
+            effect: 'slide',
+            slidesPerView: 1,
+            autoplay: {
+              delay: 4500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            }
+          }
+        }
+      });
+    }
+  }
+
   // ============================================================
   // Contact Form — validation + Netlify submit
   // ============================================================

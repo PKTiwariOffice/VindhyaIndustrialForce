@@ -34,6 +34,9 @@
 
     <!-- Splide.js carousel styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <!-- Swiper.js carousel styles (Hero/Services image slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body class="bg-slate-50 antialiased">
 
@@ -150,9 +153,57 @@
                         </div>
                     </div>
 
-                    <!-- Core Expertise Card -->
-                    <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-100 animate-fade-in-up delay-3">
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Our Core Expertise</h3>
+                    <!-- Hero Image Carousel + Core Expertise Card -->
+                    <div class="lg:col-span-5 space-y-8 animate-fade-in-up delay-3">
+                        <!-- Swiper: responsive hero/services image carousel -->
+                        <div class="hero-swiper swiper" role="region" aria-label="Vindhya Industrial Force services image carousel">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1: Manpower & Security banner -->
+                                <div class="swiper-slide">
+                                    <figure class="hero-slide">
+                                        <img src="/assets/images/hero-banner.svg"
+                                             alt="Complete manpower and security solutions for your business"
+                                             class="hero-slide-img" loading="lazy">
+                                        <figcaption class="hero-slide-caption">
+                                            <span>Complete Manpower &amp; Security Solutions</span>
+                                            <span>Verified staff for factories, offices &amp; hospitals</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Slide 2: Security guard banner -->
+                                <div class="swiper-slide">
+                                    <figure class="hero-slide">
+                                        <img src="/assets/images/security-guard.svg"
+                                             alt="Trained 24/7 security personnel on duty"
+                                             class="hero-slide-img" loading="lazy">
+                                        <figcaption class="hero-slide-caption">
+                                            <span>24/7 Trained Security Personnel</span>
+                                            <span>Supervision &amp; rapid replacement round the clock</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Slide 3: Client trust banner -->
+                                <div class="swiper-slide">
+                                    <figure class="hero-slide">
+                                        <img src="/assets/images/client-logos.svg"
+                                             alt="Trusted by leading businesses across Bhopal and M.P."
+                                             class="hero-slide-img" loading="lazy">
+                                        <figcaption class="hero-slide-caption">
+                                            <span>Trusted By Leading Businesses</span>
+                                            <span>Healthcare, industrial, corporate &amp; education</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <!-- Carousel controls -->
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev" aria-label="Previous slide"></div>
+                            <div class="swiper-button-next" aria-label="Next slide"></div>
+                        </div>
+
+                        <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-100">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Our Core Expertise</h3>
                         <p class="text-slate-500 text-sm mb-6">Tailored solutions for factories, corporate offices, and commercial establishments.</p>
                         <div class="space-y-4">
                             <div class="flex items-start gap-4 p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
@@ -176,6 +227,7 @@
                                     <p class="text-xs text-slate-500">Deep Cleaning &amp; Housekeeping Staff</p>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -561,6 +613,9 @@
 
     <!-- Splide.js carousel library (must load BEFORE main.js) -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- Swiper.js carousel library (must load BEFORE main.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Modular JavaScript -->
     <script src="/js/main.js" defer></script>
